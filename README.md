@@ -16,6 +16,7 @@ For any used-car listing, FairPrice Auto estimates the expected asking price wit
 | `app.py` | Streamlit interface for the prototype |
 | `data/` | Cleaned datasets, audit tables and trained models (`data/models/`), produced by the main notebook |
 | `figures/` | Charts produced by the main notebook (audit, price model, validation) |
+| `assets/`, `.streamlit/` | Logo and theme of the Streamlit interface |
 
 ## Data
 
