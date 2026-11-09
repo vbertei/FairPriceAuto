@@ -1,0 +1,4 @@
+anomaly_type,n_samples,recall_detection,shap_top1_accuracy,shap_top3_accuracy
+1 Injected Anomalies,307,24.76%,37.13%,57.0%
+2 Injected Anomalies,298,44.3%,62.42%,86.91%
+3 Injected Anomalies,300,62.33%,76.67%,96.33%

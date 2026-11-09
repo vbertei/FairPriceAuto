@@ -1,0 +1,4 @@
+step,rows_before,rows_after,removed_rows
+"Records without make, model, year, km or price (or with values <= 0)",23957,23889,68
+Duplicates: same valid VIN,23889,23242,647
+"Duplicates: same ad_key (make, model, date, km, power, price)",23242,22632,610

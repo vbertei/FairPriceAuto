@@ -1,0 +1,8 @@
+check,rows,perc_italy
+Total rows Italy,23957,100.0
+"Records without essential data (make, model, date, km, price)",68,0.28
+Missing VINs,16860,70.38
+Repeated VINs (excluding missing),768,3.21
+Price below 500 EUR,7,0.03
+Power above 1000 kW,15,0.06
+Registration in the future (beyond today),0,0.0

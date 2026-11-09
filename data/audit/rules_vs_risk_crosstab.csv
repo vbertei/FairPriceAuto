@@ -1,0 +1,6 @@
+risk_category,at least one rule,no rule,All
+high,3,13,16
+low,13,513,526
+medium,3,85,88
+none,38,3859,3897
+All,57,4470,4527

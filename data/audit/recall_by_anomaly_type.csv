@@ -1,0 +1,7 @@
+anomaly_type,n_total,recall_all_%,n_single,recall_single_%,recall_single_high_medium_%
+price_x3,203,49.8,35,17.1,2.9
+price_x0.3,259,37.5,45,11.1,2.2
+km_x5,249,52.6,37,24.3,5.4
+km_0,216,38.9,45,4.4,2.2
+year_minus_10,437,46.2,70,22.9,1.4
+power_x3,439,65.1,75,50.7,13.3

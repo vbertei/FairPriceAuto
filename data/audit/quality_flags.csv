@@ -1,0 +1,8 @@
+flag,rows,percentage
+low_price_flag,7,0.03
+high_power_flag,15,0.07
+very_high_km_flag,1,0.0
+year_beyond_reference_flag,11,0.05
+new_and_used_flag,0,0.0
+inconsistent_price_net_flag,75,0.33
+invalid_vin_flag,207,0.91

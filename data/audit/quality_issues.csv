@@ -1,0 +1,46 @@
+category,description,involved_rows,percentage_of_total
+missing values,column fuel_cons_highway_l100_km with at least 20% missing,118382,100.0
+missing values,column warranty with at least 20% missing,118382,100.0
+missing values,column has_warranty with at least 20% missing,118382,100.0
+missing values,column fuel_cons_city_l100_km with at least 20% missing,118382,100.0
+missing values,column electric_range_city_km with at least 20% missing,117743,99.46
+data type,mileage_km is text (numerical mileage_km_raw exists),117738,99.46
+missing values,column fuel_cons_electric_comb_l100_wltp_km with at least 20% missing,113456,95.84
+missing values,column electric_range_km with at least 20% missing,105637,89.23
+missing values,column production_year with at least 20% missing,96110,81.19
+data type,"weight_kg is text (e.g. 1,945 kg)",94296,79.65
+missing values,column co2_emission_grper_km with at least 20% missing,93571,79.04
+missing values,column fuel_cons_comb_l100_wltp_km with at least 20% missing,88112,74.43
+missing values,column price_vat_rate with at least 20% missing,88003,74.34
+missing values,column german_hsn_tsn with at least 20% missing,87571,73.97
+missing values,column price_net with at least 20% missing,84366,71.27
+missing values,column vin with at least 20% missing,78160,66.02
+missing values,column fuel_cons_comb_l100_km with at least 20% missing,76538,64.65
+data type,ratings_average is text with decimal comma,76428,64.56
+missing values,column original_market with at least 20% missing,72766,61.47
+missing values,column co2_emission_grper_wltp_km with at least 20% missing,71927,60.76
+missing values,column primary_fuel with at least 20% missing,58409,49.34
+missing values,column nr_prev_owners with at least 20% missing,53568,45.25
+missing values,column body_color_original with at least 20% missing,44332,37.45
+missing values,column gears with at least 20% missing,43248,36.53
+missing values,column ratings_count with at least 20% missing,41954,35.44
+missing values,column ratings_recommend_percentage with at least 20% missing,41954,35.44
+missing values,column ratings_average with at least 20% missing,41954,35.44
+missing values,column envir_standard with at least 20% missing,41261,34.85
+missing values,column upholstery_color with at least 20% missing,32485,27.44
+missing values,column drive_train with at least 20% missing,27753,23.44
+missing values,column upholstery with at least 20% missing,26745,22.59
+missing values,column paint_type with at least 20% missing,26047,22.0
+missing values,column cylinders with at least 20% missing,24858,21.0
+missing values,column weight_kg with at least 20% missing,24086,20.35
+duplicates,repeated vin (excluding missing),2644,2.23
+price,price below 500 euros,38,0.03
+power,power_kw above 1000,25,0.02
+currency,price not in EUR (or currency missing),0,0.0
+duplicates,completely identical rows,0,0.0
+duplicates,repeated id,0,0.0
+price,price less than or equal to 0,0,0.0
+mileage,negative km,0,0.0
+power,power_kw less than or equal to 0,0,0.0
+dates,unreadable registration_date,0,0.0
+dates,registration in the future,0,0.0

@@ -1,0 +1,13 @@
+# raw Kaggle dataset: too large, download it from Kaggle
+dataset/
+*.zip
+
+# system and editor files
+desktop.ini
+.DS_Store
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+
+# Office temporary files
+~$*

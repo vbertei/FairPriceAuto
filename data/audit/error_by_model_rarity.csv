@@ -1,0 +1,3 @@
+model_rarity,listings,MAE_euro,MAPE_pct,MdAPE_pct
+Common model (>= 30 train listings),3971,4309.3,9.7,6.8
+Rare model (< 30 train listings),555,46645.2,16.7,11.0

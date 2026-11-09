@@ -1,0 +1,4 @@
+model,MAE_euros,MAPE_%,MdAPE_%,MAE_euros_without_suspicious_prices,MAPE_%_without_suspicious_prices,R2_log,R2_log_clean
+"Baseline 1: Median (make, model, year)",12397.0,17.6,10.6,12399.0,17.4,0.9003,0.9007
+Baseline 2: Linear Regression on log(price),13968.0,17.7,12.1,13970.0,17.6,0.8964,0.8971
+LightGBM Regressor (Huber loss),9499.0,10.6,7.2,9501.0,10.5,0.9614,0.9618

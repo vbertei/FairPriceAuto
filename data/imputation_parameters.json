@@ -1,0 +1,39 @@
+{
+  "medians": {
+    "power_kw": 150.0,
+    "power_hp": 204.0,
+    "nr_seats": 5.0,
+    "nr_doors": 5.0,
+    "gears": 7.0,
+    "cylinders": 4.0,
+    "cylinders_volume_cc": 1995.0,
+    "weight_kg": 1665.0,
+    "fuel_cons_comb_l100_km": 5.7
+  },
+  "categoricals": [
+    "vehicle_type",
+    "body_type",
+    "body_color",
+    "paint_type",
+    "upholstery",
+    "upholstery_color",
+    "transmission",
+    "drive_train",
+    "fuel_category",
+    "primary_fuel",
+    "envir_standard",
+    "original_market",
+    "offer_type",
+    "country_code",
+    "seller_type"
+  ],
+  "not_imputed": [
+    "nr_prev_owners",
+    "electric_range_km",
+    "electric_range_city_km",
+    "fuel_cons_comb_l100_wltp_km",
+    "fuel_cons_electric_comb_l100_wltp_km",
+    "co2_emission_grper_km",
+    "co2_emission_grper_wltp_km"
+  ]
+}

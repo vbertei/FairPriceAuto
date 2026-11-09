@@ -1,0 +1,12 @@
+rule,listings,share_%
+"R1 is_new with mileage > 1,000 km",0,0.0
+R2 is_new and is_used both true,0,0.0
+R3 power_hp inconsistent with power_kw (> 5 hp),0,0.0
+R4 electric car with cylinders/displacement,28,0.12
+R5 combustion car with electric range,1,0.0
+R6 registration in the future,11,0.05
+R7 is_new with previous owners,0,0.0
+R8 is_new with declared accident,0,0.0
+"R9 km_per_year > 50,000",146,0.65
+"R10 used, age >= 3, km_per_year < 1,000",119,0.53
+At least one rule,304,1.34

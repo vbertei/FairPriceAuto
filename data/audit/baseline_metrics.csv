@@ -1,0 +1,3 @@
+model,MAE_euros,MAPE_%,MdAPE_%,MAE_euros_without_suspicious_prices,MAPE_%_without_suspicious_prices
+"Median by make, model, year",12397.0,17.6,10.6,12399.0,17.4
+Linear regression on log(price),13968.0,17.7,12.1,13970.0,17.6

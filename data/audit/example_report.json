@@ -1,0 +1,8 @@
+{
+  "asking_price": 118890.0,
+  "ideal_price": 146398.49,
+  "price_category": "below_market",
+  "anomaly_score": -0.0649,
+  "risk_category": "MEDIUM",
+  "top_3_anomalous_features": "power_kw = 420.00, mediana comparabili = 419.00 [SHAP: -0.53] | make_freq = 0.00 [SHAP: -0.47] | cylinders_volume_cc = 6592.00, mediana comparabili = 6592.00 [SHAP: -0.44]"
+}
