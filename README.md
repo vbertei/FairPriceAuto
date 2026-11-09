@@ -15,8 +15,7 @@ For any used-car listing, FairPrice Auto estimates the expected asking price wit
 | `FairPriceDemo.ipynb` | Loads the saved models and evaluates a single listing, with JSON output |
 | `app.py` | Streamlit interface for the prototype |
 | `data/` | Cleaned datasets, audit tables and trained models (`data/models/`), produced by the main notebook |
-| `figures/` | Figures used in the paper |
-| `FairPrice_MarketSize.xlsx` | TAM / SAM / SOM model with visible formulas and assumptions |
+| `figures/` | Charts produced by the main notebook (audit, price model, validation) |
 
 ## Data
 
