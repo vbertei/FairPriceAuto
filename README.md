@@ -53,4 +53,4 @@ All random steps use `SEED = 1234`, so a full rerun reproduces the numbers repor
 
 ## License and data
 
-Code for academic use. The dataset is distributed on Kaggle under its own license; no personal identifiers (VIN, address, seller name, free-text description) are used by the models.
+Code for academic use. The dataset is distributed on Kaggle under its own license; no personal identifiers (address, seller name, free-text description) are used by the models.
