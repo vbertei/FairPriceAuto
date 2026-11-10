@@ -1,8 +1,3 @@
-"""FairPrice Auto - Streamlit interface for the prototype.
-
-Run from the project folder (the one that contains data/ and data/models/):
-    streamlit run app.py
-"""
 import base64
 import json
 import os
