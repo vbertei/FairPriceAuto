@@ -13,7 +13,7 @@ warnings.filterwarnings("ignore")
 
 DATA_FOLDER = "data"
 MODEL_DIR = os.path.join(DATA_FOLDER, "models")
-LOGO_PATH = os.path.join("assets", "logo2.png")
+LOGO_PATH = os.path.join("assets", "logo3.png")
 REFERENCE_YEAR = 2025
 CATEGORY_LABELS = ["well_below_market", "below_market", "in_line", "above_market", "well_above_market"]
 CATEGORY_TEXT = {
@@ -21,13 +21,13 @@ CATEGORY_TEXT = {
     "above_market": "Above market", "well_above_market": "Well above market",
 }
 
-st.set_page_config(page_title="FairPrice Auto", page_icon="🚗", layout="wide")
+st.set_page_config(page_title="FairPrice Auto", page_icon=LOGO_PATH, layout="wide")
 
-# --------------------------------------------------------------------------- style
+# style
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&family=Mulish:wght@400;600;700&display=swap');
-:root { --navy:#0B1B2D; --card:#13263C; --copper:#D08259; --light:#E4E1DC; --cream:#F3EEE8; --soft:#C9D3DE; --muted:#A9B6C6; }
+:root { --navy:#0B1B2D; --card:#13263C; --copper:#E0B84F; --light:#E4E1DC; --cream:#F3EEE8; --soft:#C9D3DE; --muted:#A9B6C6; }
 [data-testid="stMarkdownContainer"], [data-testid="stMarkdownContainer"] *, [data-testid="stWidgetLabel"] *, .stButton button, input { font-family:'Mulish', Arial, sans-serif !important; }
 .stApp { background: var(--navy); color: var(--cream); }
 h1, h2, h3 { font-family:'Outfit', Arial, sans-serif !important; color: var(--copper) !important; }
@@ -48,7 +48,7 @@ section[data-testid="stSidebar"] * { color: var(--cream); }
 .fp-ok { border-left: 5px solid #5D6F86; background: var(--card); padding: 12px 16px; margin: 8px 0; border-radius: 0 8px 8px 0; color: var(--soft); }
 .fp-foot { color: var(--muted); font-size: 13px; margin-top: 30px; border-top: 1px solid #3A4B60; padding-top: 12px; }
 div.stButton > button { background: var(--copper); color: var(--navy); border: none; font-weight: 700; }
-div.stButton > button:hover { background: #E3A07D; color: var(--navy); }
+div.stButton > button:hover { background: #E8C96E; color: var(--navy); }
 </style>
 """, unsafe_allow_html=True)
 
@@ -197,7 +197,7 @@ def nice(feature):
 def scale_html(residual, thresholds):
     t = [-0.35] + thresholds + [0.35]
     widths = [12, 16, 44, 16, 12]
-    colors = ["#7A3B1E", "#B86A42", "#0B1B2D", "#B86A42", "#7A3B1E"]
+    colors = ["#7A5E14", "#B8952F", "#0B1B2D", "#B8952F", "#7A5E14"]
     labels = ["well below", "below", "in line", "above", "well above"]
     # marker position: linear inside the segment the residual falls in
     r = min(max(residual, t[0]), t[-1])
@@ -211,11 +211,11 @@ def scale_html(residual, thresholds):
     labs = "".join(f'<div style="width:{w}%;text-align:center;font-size:13px;color:#0B1B2D">{l}</div>' for w, l in zip(widths, labels))
     return (f'<div style="position:relative;padding-top:16px">'
             f'<div style="position:absolute;left:calc({pos:.1f}% - 8px);top:0;width:0;height:0;border-left:8px solid transparent;'
-            f'border-right:8px solid transparent;border-top:13px solid #D08259"></div>'
+            f'border-right:8px solid transparent;border-top:13px solid #E0B84F"></div>'
             f'<div style="display:flex">{segs}</div><div style="display:flex;margin-top:4px">{labs}</div></div>')
 
 
-# --------------------------------------------------------------------------- app
+# app
 try:
     price_model, q10, q90, iso_forest, explainer, config = load_models()
     train_df, test_df = load_data()
@@ -266,11 +266,11 @@ st.markdown(f'<div class="fp-eyebrow">Listing</div><h2 style="margin-top:0">{str
 left, right = st.columns([1.05, 1], gap="large")
 
 with left:
-    pill_bg = "#0B1B2D" if p["category"] == "in_line" else "#D08259"
+    pill_bg = "#0B1B2D" if p["category"] == "in_line" else "#E0B84F"
     pill_fg = "#F3EEE8" if p["category"] == "in_line" else "#0B1B2D"
     st.markdown(f"""
 <div class="fp-card-light">
-  <div class="fp-eyebrow" style="color:#9A5530">Price check</div>
+  <div class="fp-eyebrow" style="color:#8A6A12">Price check</div>
   <div style="display:flex;gap:28px;flex-wrap:wrap;margin:8px 0 14px 0">
     <div><div class="fp-label-dark">Asking</div><div class="fp-big">{euro(price)}</div></div>
     <div><div class="fp-label-dark">Expected</div><div class="fp-big">{euro(p['ideal'])}</div></div>
@@ -282,11 +282,11 @@ with left:
 </div>""", unsafe_allow_html=True)
     z_text = ("too few comparable cars of the same make, model and year" if a["z"] is None
               else f"robust z-score {a['z']:+.1f} against cars of the same make, model and year"
-              + (" — <b style='color:#D08259'>unusual price</b>" if abs(a["z"]) > 3 else ""))
+              + (" — <b style='color:#E0B84F'>unusual price</b>" if abs(a["z"]) > 3 else ""))
     st.markdown(f'<div class="fp-ok">Peer comparison: {z_text}</div>', unsafe_allow_html=True)
 
 with right:
-    risk_colors = {"high": "#D08259", "medium": "#B86A42", "low": "#5D6F86", "none": "#3A4B60"}
+    risk_colors = {"high": "#E0B84F", "medium": "#B8952F", "low": "#5D6F86", "none": "#3A4B60"}
     st.markdown(f"""
 <div class="fp-card">
   <div class="fp-eyebrow">Consistency check</div>
